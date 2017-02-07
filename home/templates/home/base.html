@@ -1,12 +1,24 @@
 {% load staticfiles %}
 <html>
   <head>
-
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Nathanael Meyers</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="{% static 'js/home.js' %}"></script>
   </head>
 
   <body>
-    <h1>Look it's the base template!</h1>
+      <ul class="top-menu">
+        <li><a href="/"> Home</a> </li>
+        <li><a href="/about"> About </a></li>
+        <li><a href="/contact"> Contact </a></li>
+        <li><a href="portfolio"> Portfolio </a></li>
+        <li><a href="/blog"> Blog </a> </li>
+      </ul>
+    <div class="page-header">
+            <h1><a href="/">Nathanael Meyers</a></h1>
+        </div>
+    <div class="top-info"> My friends call me Nate. I get a kick out of Web Development, Automation, and lots of other things </div>
+
     {% block content %}
 
     {% endblock %}
