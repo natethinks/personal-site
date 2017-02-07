@@ -10,12 +10,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  line-height: 1.5; }
-
-.page-header, .top-info {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  line-height: 1.5;
+  background-color: grey; }
 
 .top-menu {
   border-bottom: 10px solid #e67e22;
@@ -34,5 +30,25 @@ body {
   color: #000;
   padding: 8px 16px;
   text-decoration: none; }
+
+.page-header a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Pattaya', sans-serif;
+  font-size: 3em; }
+
+.page-header p {
+  font-family: 'Source Code Pro', monospace; }
+
+.aligner {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  height: 90%;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column; }
 
 /*# sourceMappingURL=home.css.map */
