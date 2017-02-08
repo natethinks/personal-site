@@ -17,6 +17,7 @@ html {
 body {
     line-height: 1.5;
     background-color: $grey;
+    color: black;
 }
 
 .top-menu {
@@ -31,7 +32,6 @@ body {
 .top-menu  a {
     display:inline-block;
     padding:10px;
-    color: #000;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -45,6 +45,16 @@ body {
 
 .page-header p {
   font-family: 'Source Code Pro', monospace;
+  width: 300px;
+}
+
+.email:hover {
+  color: white;
+  cursor: hand;
+}
+
+.email {
+  width: 40px;
 }
 
 .aligner {
@@ -57,4 +67,9 @@ body {
   align-items: left;
   justify-content: center;
   flex-direction: column;
+}
+
+@media screen and (max-width:800px) {
+  .aligner { margin-left: 25px;}
+  .page-header a {font-size: 2em;}
 }

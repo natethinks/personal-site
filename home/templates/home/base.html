@@ -2,10 +2,12 @@
 <html>
 
 <head>
-    <title>Nathanael Meyers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/hint.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/clipboard.min.js' %}"></script>
     <link href="https://fonts.googleapis.com/css?family=Pattaya|Source+Code+Pro" rel="stylesheet">
 </head>
 
@@ -19,11 +21,28 @@
       </ul> -->
 
     <div class="aligner page-header">
-            <h1 class="aligner-item"><a href="/">Nathanael Meyers</a></h1>
-            <p class="aligner-item email hint--left" aria-label="Copy">me@nathanaelmeyers.com</p>
-            <p> My friends call me Nate. I get a kick out of Web Development, Automation, and lots of other things </p>
+        <h1 class="aligner-item"><a href="/">Nathanael Meyers</a></h1>
+        <p id="email-id" class="aligner-item email hint--top-left hint--bounce" aria-label="Copy" data-clipboard-text="me@nathanaelmeyers.com">me@nathanaelmeyers.com</p>
+        <p> My friends call me Nate. I get a kick out of Web Development, Automation, and lots of other things </p>
+
     </div>
     {% block content %} {% endblock %}
+
+    <!-- 3. Instantiate clipboard by passing a string selector -->
+    <script>
+        var clipboard = new Clipboard('.email');
+        clipboard.on('success', function(e) {
+            var cp = document.getElementById("email-id");
+            cp.className += " hint--success ";
+        });
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+    </script>
+
+
+
+
 </body>
 
 </html>
