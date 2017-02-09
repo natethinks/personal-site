@@ -1,5 +1,24 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
+<div class="aligner page-header">
+    <h1 class="aligner-item"><a href="/">Nathanael Meyers</a></h1>
+    <p id="email-id" class="aligner-item email hint--top-left hint--bounce" aria-label="Copy" data-clipboard-text="me@nathanaelmeyers.com">me@nathanaelmeyers.com</p>
+    <p> My friends call me Nate. I get a kick out of Web Development, Automation, and lots of other things </p>
+
+</div>
+
+
+    <!-- 3. Instantiate clipboard by passing a string selector -->
+    <script>
+        var clipboard = new Clipboard('.email');
+        clipboard.on('success', function(e) {
+            var cp = document.getElementById("email-id");
+            cp.className += " hint--success ";
+        });
+        clipboard.on('error', function(e) {
+            console.log(e);
+        });
+    </script>
 
 {% endblock %}

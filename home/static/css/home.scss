@@ -20,20 +20,37 @@ body {
     color: black;
 }
 
-.top-menu {
-    border-bottom: 10px solid $orange;
-    list-style:none;
-    margin:20px;
-    background-color: $green;
+// .top-menu {
+//     border-bottom: 10px solid $orange;
+//     list-style:none;
+//     margin:20px;
+//     background-color: $green;
+// }
+// .top-menu li {
+//     display:inline;
+// }
+// .top-menu  a {
+//     display:inline-block;
+//     padding:10px;
+//     padding: 8px 16px;
+//     text-decoration: none;
+// }
+
+ul.top-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.top-menu li {
-    display:inline;
+
+ul.top-menu li {
+  list-style: none;
+
 }
-.top-menu  a {
-    display:inline-block;
-    padding:10px;
-    padding: 8px 16px;
-    text-decoration: none;
+
+ul.top-menu li a {
+  text-decoration: none;
+  color: white;
 }
 
 .page-header a{

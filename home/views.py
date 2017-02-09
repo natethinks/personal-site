@@ -13,3 +13,6 @@ class ContactView(TemplateView):
 
 class PortfolioView(TemplateView):
     template_name = "home/portfolio.html"
+
+class BlogView(TemplateView):
+    template_name = "home/blog.html"
