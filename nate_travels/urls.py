@@ -1,13 +1,10 @@
 from django.conf.urls import url
-from home.views import *
+from nate_travels.views import *
 from . import views
 
-app_name = ''
+app_name = 'nate_travels'
 urlpatterns = [
     # ex: /home/
     url(r'^$', HomeView.as_view()),
-    url(r'^about$', AboutView.as_view()),
-    url(r'^contact$', ContactView.as_view()),
-    url(r'^portfolio$', PortfolioView.as_view()),
 ]
 #url(r'^$', views.index, name='index'),
