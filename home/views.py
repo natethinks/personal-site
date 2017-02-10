@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from home.models import Post
 # Create your views here.
 
 class AboutView(TemplateView):
@@ -14,5 +15,6 @@ class ContactView(TemplateView):
 class PortfolioView(TemplateView):
     template_name = "home/portfolio.html"
 
-class BlogView(TemplateView):
+class BlogListView(ListView):
     template_name = "home/blog.html"
+    
