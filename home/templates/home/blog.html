@@ -2,12 +2,14 @@
 
 {% block content %}
 
+<div class="container">
 {% for post in post_list %}
-<h1>{{ post.title }} {{ post.content }}</h1>
+<h1> {{ post.title }} </h1>
+<p> {{ post.published }} </p>
+<p> {{ post.category }} </p>
+<p> {{ post.content }}</p>
 {% endfor %} 
 
-
-
-<p>Woo look I'm on the blog page</p>
+</div>
 
 {% endblock %}
