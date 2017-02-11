@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 # Create your models here.
 class Post(models.Model):
@@ -6,7 +7,7 @@ class Post(models.Model):
 	author = models.CharField(max_length=50)
 	content = models.TextField()
 	published = models.DateTimeField()
-	slug = models.SlugField(max_length=100, unique=True)
+	slug = models.SlugField(max_length=100, unique=True, blank=True)
 	category = models.ForeignKey('home.Category')
 	
 	def __str__(self):
@@ -18,7 +19,7 @@ class Post(models.Model):
 
 class Category(models.Model):
 	title = models.CharField(max_length=100, unique=True)
-	slug = models.SlugField(max_length=100, unique=True)
+	slug = models.SlugField(max_length=100, unique=True, blank=True)
 
 	def __str__(self):
 		return self.title
