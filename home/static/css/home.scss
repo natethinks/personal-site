@@ -1,6 +1,6 @@
 $orange: #e67e22;
 $green: #2ecc71;
-$grey: #9d9c9e;
+$grey: white;
 
 * {
   box-sizing: border-box;
@@ -18,6 +18,7 @@ body {
     line-height: 1.5;
     background-color: $grey;
     color: black;
+	margin: 0;
 }
 
 // .top-menu {
@@ -41,6 +42,8 @@ ul.top-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding-bottom: 5px;
+  border-bottom: 4px solid black;
 }
 
 ul.top-menu li {
@@ -50,9 +53,9 @@ ul.top-menu li {
 
 ul.top-menu li a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 1.5em;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Play', sans-serif;
 }
 
 .page-header a{
@@ -86,6 +89,28 @@ ul.top-menu li a {
   align-items: left;
   justify-content: center;
   flex-direction: column;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 @media screen and (max-width:800px) {
