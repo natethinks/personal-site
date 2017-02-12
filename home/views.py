@@ -19,9 +19,8 @@ class BlogListView(ListView):
 	template_name = "home/blog.html"
 	model = Post    
 	
-	ordered_posts = Post.objects.order_by('published')
-	
 	def get_context_data(self, **kwargs):
 		context = dict()
-		context['post_list'] = Post.objects.all()
+		all_posts = Post.objects.all()
+		context['post_list'] = all_posts.order_by('-published')
 		return context
