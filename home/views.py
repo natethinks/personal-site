@@ -26,11 +26,7 @@ class BlogListView(ListView):
 		context['post_list'] = all_posts.order_by('-published')
 		return context
 
-class BlogDetailView(DetailView):
-	template_name = "home/blog_detail.html"
-	model = Post
-
-	def get_context_data(self, **kwargs):
-		context = super(BlogDetailView, self).get_context_data(**kwargs)
-		context['now'] = timezone.now()
-		return context
+def BlogDetailView(request, slug):
+	post = Post.objects.get(slug = slug)
+	context = { 'post': post }
+	return render(request, "home/blogdetail.html", context)
