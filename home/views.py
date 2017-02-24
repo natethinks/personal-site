@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
+from django.views.generic.detail import DetailView
 from home.models import Post
 # Create your views here.
 
@@ -23,4 +24,13 @@ class BlogListView(ListView):
 		context = dict()
 		all_posts = Post.objects.all()
 		context['post_list'] = all_posts.order_by('-published')
+		return context
+
+class BlogDetailView(DetailView):
+	template_name = "home/blog_detail.html"
+	model = Post
+
+	def get_context_data(self, **kwargs):
+		context = super(BlogDetailView, self).get_context_data(**kwargs)
+		context['now'] = timezone.now()
 		return context
