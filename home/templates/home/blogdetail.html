@@ -1,5 +1,13 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+<div class="container">
 <h1>{{ post.title }}</h1>
 <p>{{ post.content }}</p>
-<p>Reporter: {{ post.author }}</p>
+<p>Author: {{ post.author }}</p>
 <p>Published: {{ post.published|date }}</p>
-<p>Date: {{ now|date }}</p>
+<p>Category: {{ post.category }} </p>
+</div>
+
+{% endblock %}
