@@ -42,7 +42,7 @@ h1.top-menu {
   position: absolute;
   padding-left: 20%;
   margin-top: 5px;
-  font-family: 'Pattaya', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 ul.top-menu {
@@ -72,7 +72,7 @@ margin: 0;
 .page-header a{
   text-decoration: none;
   color: black;
-  font-family: 'Pattaya', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
   font-size: 3em;
 }
 
@@ -82,7 +82,7 @@ margin: 0;
 }
 
 .email:hover {
-  color: white;
+  color: gray;
   cursor: hand;
 }
 
@@ -91,6 +91,7 @@ margin: 0;
 }
 
 .aligner {
+  padding-top: 100px;
   width: 30%;
   margin-left: auto;
   margin-right: auto;
