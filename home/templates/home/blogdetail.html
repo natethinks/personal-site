@@ -4,10 +4,15 @@
 
 <div class="container">
 <h1>{{ post.title }}</h1>
-<p>{{ post.content }}</p>
-<p>Author: {{ post.author }}</p>
 <p>Published: {{ post.published|date }}</p>
 <p>Category: {{ post.category }} </p>
+<p>{{ post.content }}</p>
 </div>
+
+<style>
+  li.blog a{
+	border-bottom: 2px solid #2f79ef;
+}
+</style>
 
 {% endblock %}
