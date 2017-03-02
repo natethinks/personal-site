@@ -45,12 +45,17 @@ h1.top-menu {
   font-family: 'Julius Sans One', sans-serif;
 }
 
+h1.top-menu a{
+  z-index: 100;
+}
+
 ul.top-menu {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   padding-right: 20%;
   position: absolute;
+  z-index: -5;
 }
 
 ul.top-menu li {

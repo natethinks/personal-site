@@ -21,12 +21,16 @@ h1.top-menu {
   margin-top: 5px;
   font-family: 'Julius Sans One', sans-serif; }
 
+h1.top-menu a {
+  z-index: 100; }
+
 ul.top-menu {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   padding-right: 20%;
-  position: absolute; }
+  position: absolute;
+  z-index: -5; }
 
 ul.top-menu li {
   list-style: none;
