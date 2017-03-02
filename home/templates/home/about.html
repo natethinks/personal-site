@@ -4,9 +4,8 @@
 <div class="container">
 
 {% for about in about_list %}
-<h1> {{ about.title }} </h1>
+<a href="/about/{{ about.slug }}"><h1> {{ about.title }} </h1></a>
 <p> {{ about.content|truncatewords:50 }} </p>
-<a href="/about/{{ about.slug }}">{{ about.title }}</a>
 {% endfor %}
 
 </div>

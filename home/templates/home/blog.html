@@ -4,7 +4,7 @@
 
 <div class="container">
 {% for post in post_list %}
-<h1> {{ post.title }} </h1>
+<a href="/blog/{{ post.slug }}"><h1> {{ post.title }} </h1></a>
 <img src="">
 <p> {{ post.published }} </p>
 <p> {{ post.category }} </p>

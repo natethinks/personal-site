@@ -10,7 +10,8 @@ urlpatterns = [
 	url(r'^about$', AboutView.as_view()),
 	url(r'^about/(?P<slug>[a-zA-Z0-9._-]+$)', views.AboutDetailView),
 	url(r'^contact$', ContactView.as_view()),
-	url(r'^portfolio$', PortfolioView.as_view()),
+	url(r'^portfolio$', PortfolioListView.as_view()),
+	url(r'^portfolio/(?P<slug>[a-zA-Z0-9._-]+$)', views. PortfolioDetailView),
 	url(r'^blog$', BlogListView.as_view()),
 	url(r'^blog/(?P<slug>[a-zA-Z0-9._-]+$)', views.BlogDetailView)
 ]
