@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Source Code Pro', monospace; }
 
 html {
   box-sizing: border-box; }
@@ -21,16 +22,12 @@ h1.top-menu {
   margin-top: 5px;
   font-family: 'Julius Sans One', sans-serif; }
 
-h1.top-menu a {
-  z-index: 100; }
-
 ul.top-menu {
   display: flex;
   justify-content: flex-end;
   width: 100%;
   padding-right: 20%;
-  position: absolute;
-  z-index: -5; }
+  position: absolute; }
 
 ul.top-menu li {
   list-style: none;
@@ -42,7 +39,7 @@ ul.top-menu li a {
   font-family: 'Source Code Pro', monospace; }
 
 .spacer {
-  height: 30px;
+  height: 100px;
   margin: 0; }
 
 .page-header a {
