@@ -14,6 +14,11 @@ class AboutView(ListView):
 		context['about_list'] = all_abouts
 		return context
 
+def AboutDetailView(request, slug):
+	about = About.objects.get(slug = slug)
+	context = { 'about': about }
+	return render(request, "home/aboutdetail.html", context)
+
 class HomeView(TemplateView):
 	template_name = "home/home.html"
 

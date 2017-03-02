@@ -2,22 +2,12 @@
 
 {% block content %}
 <div class="container">
-<h1>Skills</h1>
 
 {% for about in about_list %}
 <h1> {{ about.title }} </h1>
-<a href="/blog/{{ about.slug }}">{{ about.title }}</a>
+<p> {{ about.content|truncatewords:50 }} </p>
+<a href="/about/{{ about.slug }}">{{ about.title }}</a>
 {% endfor %}
-
-
-
-<ul>
-	<li>Python</li>
-	<li>HTML</li>
-	<li>CSS</li>
-	<li>Selenium</li>
-	<li>Django</li>
-</ul>
 
 </div>
 {% endblock %}
