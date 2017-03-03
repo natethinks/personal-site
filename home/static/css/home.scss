@@ -84,12 +84,16 @@ ul.top-menu li a {
 }
 
 .email:hover {
-  color: #2f79ef;
+  color: black;
   cursor: hand;
 }
 
 .email {
   width: 40px;
+}
+
+p.email {
+  color: #2f79ef;
 }
 
 .aligner {
