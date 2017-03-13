@@ -3,11 +3,14 @@
 {% block content %}
 <div class="container">
 
+<div class="content-container">
 {% for about in about_list %}
+<div class="content-child">
 <a href="/about/{{ about.slug }}"><h1> {{ about.title }} </h1></a>
 <p> {{ about.content|truncatewords:50 }} </p>
+</div>
 {% endfor %}
-
+</div>
 </div>
 
 <style>

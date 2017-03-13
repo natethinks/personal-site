@@ -113,6 +113,19 @@ p.email {
   padding-left: 20%;
   width: 80%;
 }
+
+.content-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;  
+}
+
+.content-child {
+  width: 40%;
+  min-width: 284px;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -131,9 +144,11 @@ p.email {
 }
 
 @media screen and (max-width:800px) {
-  .aligner { margin-left: 25px;}
+  .aligner { margin-left: 25px; padding-top: 0px;}
   .page-header a {font-size: 2em;}
   .container { padding-left: 5%; }
+  .spacer {height: 150px;}
   h1.top-menu { padding-left: 5%; position: relative; font-size:3em; margin: 0; }
-  ul.top-menu { padding-left: 5%; justify-content: flex-start;}
+  ul.top-menu { padding-left: 5%; justify-content: flex-start; flex-direction: column;}
+  
 }
