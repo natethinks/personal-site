@@ -83,17 +83,31 @@ ul.top-menu li a {
   width: 300px;
 }
 
+.email-home:hover {
+  color: black;
+  cursor: hand;
+}
+
+.email-home {
+  width: 40px;
+}
+
+p.email-home {
+  color: #2f79ef;
+}
+
 .email:hover {
   color: black;
   cursor: hand;
 }
 
-.email {
-  width: 40px;
-}
-
 p.email {
   color: #2f79ef;
+  display: block;
+}
+
+.text-center {
+	text-align: center !important;
 }
 
 .aligner {
@@ -118,7 +132,7 @@ p.email {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .content-child {
@@ -130,7 +144,7 @@ p.email {
   .container {
     width: 750px;
   }
-  
+
 }
 @media (min-width: 992px) {
   .container {
@@ -150,5 +164,92 @@ p.email {
   .spacer {height: 150px;}
   h1.top-menu { padding-left: 5%; position: relative; font-size:3em; margin: 0; }
   ul.top-menu { padding-left: 5%; justify-content: flex-start; flex-direction: column;}
-  
+
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:
+		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2') format('truetype'),;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.social-networks {
+  margin: 0 0 35px;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+	padding-bottom: 20px;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    margin: 0 7px;
+    width: 68px;
+    height: 68px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      margin-top: -50%;
+      margin-left: -50%;
+      border-radius: 100px;
+      background-color: black;
+      transition: all 400ms;
+    }
+
+    &:after {
+      position: relative;
+      display: block;
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      color: #fff;
+      font-size: 26px;
+      line-height: 66px;
+    }
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &.square a:hover:before, &.square a:focus:before {
+    border-radius: 0;
+  }
+
+  &.bounce a:hover, &.bounce a:focus {
+    animation: bounce 1s;
+  }
+
+  $networks: linkedin '\eac9' #0077b5,  twitter '\e618' #00b0ed, github '\eab1' green;
+
+  @each $network in $networks {
+     .icon-#{nth($network, 1)} {
+       &:after {
+         content: '#{nth($network, 2)}';
+      }
+
+      &:hover:before, &:focus:before {
+        background: nth($network, 3);
+      }
+    }
+  }
 }

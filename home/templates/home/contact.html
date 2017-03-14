@@ -2,8 +2,24 @@
 
 {% block content %}
 <div class="container">
-<p style=>Woo look I'm on the contact page</p>
+<p class="text-center">I'm always open to new connections. Hit me up on any of these social networks, or shoot me an email!</p>
+<p id="email-id" class="text-center email hint--top-left hint--bounce" aria-label="Copy" data-clipboard-text="me@nathanaelmeyers.com">me@nathanaelmeyers.com</p>
+<ul class="social-networks square">
+  <li><a href="https://www.linkedin.com/in/nathanaelmeyers/" target="_blank" class="icon-linkedin">LinkedIn</a></li>
+  <li><a href="https://twitter.com/natethinks" target="_blank" class="icon-twitter">Twitter</a></li>
+  <li><a href="https://github.com/natethinks" target="_blank" class="icon-github">GitHub</a></li>
+</ul>
 </div>
+<script>
+    var clipboard = new Clipboard('.email');
+    clipboard.on('success', function(e) {
+        var cp = document.getElementById("email-id");
+        cp.className += " hint--success ";
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>
 <style>
   li.contact a{
 	border-bottom: 2px solid #2f79ef;
