@@ -5,7 +5,7 @@ from django.utils.text import slugify
 class Post(models.Model):
 	title = models.CharField(max_length=50, unique=True)
 	author = models.CharField(max_length=50)
-	content = models.TextField()
+	content = models.TextField(help_text="<pre class='prettyprint'></pre>")
 	published = models.DateTimeField()
 	slug = models.SlugField(max_length=100, unique=True, blank=True)
 	category = models.ForeignKey('home.Category')
