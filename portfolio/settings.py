@@ -25,8 +25,7 @@ SECRET_KEY = 'czcvx5!t4(im2k2-ndt8qrb=lf554m83%tq_3%wdd99fa48dgn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'nate-portfolio.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = [u'nate-portfolio.herokuapp.com', 'localhost', u'www.nathanaelmeyers.com', u'nathanaelmeyers.com']
 
 # Application definition
 
