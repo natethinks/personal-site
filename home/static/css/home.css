@@ -96,6 +96,33 @@ p.email {
   flex-wrap: wrap;
   justify-content: space-between; }
 
+img.portfolio-image {
+  max-width: 100%; }
+
+.portfolio-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.portfolio-item {
+  width: 47%;
+  min-width: 336px;
+  background-color: #f2f2f5;
+  padding: 0 20px 0 20px;
+  margin-bottom: 20px;
+  border: 1px solid #dcd9d9; }
+
+.item-link:visited {
+  text-decoration: none;
+  color: black; }
+
+.item-link:hover {
+  color: #2f79ef; }
+
+.item-heading {
+  display: block !important;
+  text-align: center; }
+
 .content-child {
   width: 40%;
   min-width: 284px; }
@@ -133,6 +160,13 @@ p.email {
     padding-left: 5%;
     justify-content: flex-start;
     flex-direction: column; } }
+@media screen and (max-width: 320px) {
+  .container {
+    padding-left: 10px; }
+
+  .portfolio-item {
+    padding: 0;
+    min-width: 300px; } }
 @font-face {
   font-family: 'icomoon';
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2") format("truetype");

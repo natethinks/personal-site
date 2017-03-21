@@ -3,11 +3,15 @@
 {% block content %}
 <div class="container">
 
-{% for project in project_list %} 
-<a href="/portfolio/{{ project.slug }}"><h1> {{ project.title }} </h1></a>
+<div class="portfolio-menu">
+{% for project in project_list %}
+<div class="portfolio-item"> 
+<a class="item-link" href="/portfolio/{{ project.slug }}"><h2 class="heading">{{ project.title }}</h2></a>
+<img class="portfolio-image" src="{{ project.image_1 }}">
 <p> {{ project.content|truncatewords:50 }} </p>
+</div>
 {% endfor %}
-<div>
+</div>
 <style>
   li.portfolio a{
 	border-bottom: 2px solid #2f79ef;
