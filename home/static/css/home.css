@@ -112,6 +112,10 @@ img.portfolio-image {
   margin-bottom: 20px;
   border: 1px solid #dcd9d9; }
 
+.item-link {
+  text-decoration: none;
+  color: black; }
+
 .item-link:visited {
   text-decoration: none;
   color: black; }
